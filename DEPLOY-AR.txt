@@ -1,0 +1,17 @@
+نشر UniScan Cloud (مرة واحدة لصاحب المشروع)
+========================================
+
+الأسهل بدون تثبيت أدوات على الحاسبة:
+1. ضع محتويات مجلد cloudflare-worker في مستودع GitHub أو GitLab.
+2. افتح Cloudflare -> Workers & Pages -> Create application -> Import repository.
+3. اختر المستودع.
+4. Root directory: مجلد cloudflare-worker إذا كان المستودع يحتوي المشروع الكامل، أو اتركه الجذر إذا رفعت هذا المجلد وحده.
+5. Build command: اتركه فارغاً.
+6. Deploy command: npx wrangler deploy
+7. اضغط Deploy.
+8. بعد نجاح النشر سيظهر رابط مثل:
+   https://uniscan.<your-subdomain>.workers.dev
+9. افتح الرابط من الهاتف للتأكد أن PWA يظهر.
+10. افتح UniScan-Windows.exe والصق نفس الرابط في شاشة الإعداد الأولى.
+
+المشروع يستخدم Worker واحداً لتقديم ملفات PWA عبر HTTPS ولتشغيل WebSocket relay عبر Durable Objects.

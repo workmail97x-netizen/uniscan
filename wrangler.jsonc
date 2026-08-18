@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "uniscan",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-18",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/ws*"]
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSIONS", "class_name": "UniScanSession" }
+    ]
+  },
+  "exports": {
+    "UniScanSession": { "type": "durable-object", "storage": "sqlite" }
+  }
+}
