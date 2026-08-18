@@ -1,0 +1,11 @@
+{
+  "name": "uniscan-cloud",
+  "version": "2.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
+  }
+}
